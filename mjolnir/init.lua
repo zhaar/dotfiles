@@ -21,7 +21,6 @@ end )
 alert.show("initial setup complete" , 1) 
 
 function update_window(window, left_index, right_index)
-  alert.show("moving to left:"..left_index.." right:"..right_index, 2)
   if left_index <= 0 or left_index >= 8
     or right_index <= 0 or right_index >= 8 then
     return
@@ -36,7 +35,6 @@ function update_window(window, left_index, right_index)
                         0,
                         horizontals[right_index-left_index + 1] * width,
                         height)
-  alert.show("left: " .. left_index .. ", right: " .. right_index,2)
   window:setframe(newframe)
 end
 
@@ -69,7 +67,6 @@ end
 
 function extendLeft(window)
   local s = getstate(window)
-  alert.show("extending left", 2)
   update_window(window, s.left - 1, s.right)
 end
 
@@ -133,6 +130,5 @@ hotkey.bind(hyper, "F", function()
 end)
 
 hotkey.bind(hyper, "=", function()
-  alert.show("reloading config", 2)
   mjolnir.reload()
 end)
