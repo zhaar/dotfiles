@@ -1,94 +1,108 @@
 <?xml version="1.0"?>
 <root>
-	<item>
-		<name>F19 to F19</name>
-		<appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, send escape)</appendix>
-		<identifier>private.f192f19_escape</identifier>
-		<autogen>
-			--KeyOverlaidModifier--
-			KeyCode::F19,
-			KeyCode::COMMAND_L,
-			ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-			KeyCode::ESCAPE
-		</autogen>
-	</item>
-  <item>
-    <name>volume up </name>
-    <identifier>private.HyperVolumeUp</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F11, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_VOLUME_UP
-    </autogen>
-  </item>
-  <item>
-    <name>volume down </name>
-    <identifier>private.HyperVolumeDown</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F10, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_VOLUME_DOWN
-    </autogen>
-  </item>
-  <item>
-    <name>volume mute</name>
-    <identifier>private.HyperVolumeMute</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F9, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_VOLUME_MUTE
-    </autogen>
-  </item>
-  <item>
-    <name>Music Control previous</name>
-    <identifier>private.HyperMusicPrevious</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F6, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_MUSIC_PREV
-    </autogen>
-  </item>
-  <item>
-    <name>Music Control play</name>
-    <identifier>private.HyperMusicPlay</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F7, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_MUSIC_PLAY
-    </autogen>
-  </item>
-
-  <item>
-    <name>Music Control next</name>
-    <identifier>private.HyperMusicNext</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F8, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_MUSIC_NEXT
-    </autogen>
-  </item>
-	<item>
-    <name>Hyper eject</name>
-    <identifier>private.HyperEject</identifier>
-    <autogen>
-    __KeyToKey__
-      KeyCode::F12, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_CONSUMERKEY_EJECT
-    </autogen>
-  </item>
-	<item>
-		<name>disable LaunchPad key</name>
-		<identifier>private.LaunchPad2f4</identifier>
-		<autogen>
-			__KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::F4
-		</autogen>
-	</item>
     <item>
-    <name>Forward Delete Using ctrl</name>
-    <identifier>private.ctrlForwardDelete</identifier>
-    <autogen>
-    __KeyToKey__
-    KeyCode::DELETE, ModifierFlag::CONTROL_L, KeyCode::FORWARD_DELETE
-    </autogen>
+        <name>F19 to Hyper</name>
+        <appendix>(F19 to Hyper (ctrl+shift+cmd+opt), escape on tap)</appendix>
+        <identifier>private.f192f19_escape</identifier>
+        <autogen>--KeyOverlaidModifier--
+            KeyCode::F19,
+            KeyCode::COMMAND_L,
+            ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::ESCAPE
+        </autogen>
     </item>
+    <item>
+        <name>Volume up</name>
+        <appendix>(Hyper + F11 => Volume up)</appendix>
+        <identifier>private.HyperVolumeUp</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F11, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_VOLUME_UP
+        </autogen>
+    </item>
+    <item>
+        <name>volume down </name>
+        <identifier>private.HyperVolumeDown</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F10, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_VOLUME_DOWN
+        </autogen>
+    </item>
+    <item>
+        <name>volume mute</name>
+        <identifier>private.HyperVolumeMute</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F9, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_VOLUME_MUTE
+        </autogen>
+    </item>
+    <item>
+        <name>Music Control previous</name>
+        <identifier>private.HyperMusicPrevious</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F6, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_MUSIC_PREV
+        </autogen>
+    </item>
+    <item>
+        <name>Music Control play</name>
+        <identifier>private.HyperMusicPlay</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F7, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_MUSIC_PLAY
+        </autogen>
+    </item>
+    
+    <item>
+        <name>Music Control next</name>
+        <identifier>private.HyperMusicNext</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F8, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_MUSIC_NEXT
+        </autogen>
+    </item>
+    <item>
+        <name>Hyper F12 = eject</name>
+        <identifier>private.HyperEject</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F12, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::VK_CONSUMERKEY_EJECT
+        </autogen>
+    </item>
+    <item>
+        <name>disable LaunchPad key</name>
+        <identifier>private.LaunchPad2f4</identifier>
+        <autogen>
+            __KeyToKey__ KeyCode::LAUNCHPAD, KeyCode::F4
+        </autogen>
+    </item>
+    <item>
+        <name>Adapt ISO layout to US</name>
+        <appendix>` -> Shift-left</appendix>
+        <appendix>§ -> `</appendix>
+        <appendix>Escape -> \</appendix>
+        <appendix>\ -> Enter</appendix>
+        <identifier>private.ISOLayoutToUS</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::RETURN</autogen>
+        <autogen>__KeyToKey__ KeyCode::F18, KeyCode::BACKSLASH </autogen>
+        <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SWISS_SECTION, KeyCode::BACKQUOTE</autogen>
+    </item>
+    <item>
+        <name>Forward Delete Using ctrl</name>
+        <identifier>private.ctrlForwardDelete</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::DELETE, ModifierFlag::CONTROL_L, KeyCode::FORWARD_DELETE
+        </autogen>
+    </item>
+    
+    
 </root>
